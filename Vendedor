@@ -1,0 +1,24 @@
+package solucao;
+
+class Vendedor extends Empregado {
+
+    private double percentualComissao;
+
+    public Vendedor(String nome, double salario, double percentualComissao) {
+        super(nome, salario);
+        this.percentualComissao = percentualComissao;
+    }
+
+    public double calcularSalarioComissao() {
+        double comissao = salario * (percentualComissao / 100);
+        return salario + comissao;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\nSalário sem comissão: R$ " + salario +
+                "\nSalário com comissão: R$ " + calcularSalarioComissao() +
+                "\nPercentual de comissão: " + percentualComissao + "%";
+    }
+}
