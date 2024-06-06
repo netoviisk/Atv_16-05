@@ -1,0 +1,16 @@
+package solucao;
+
+public class TesteObjetos {
+
+    public static void main(String[] args) {
+        Empregado gerente = new Gerente("João Silva", 5000.00, "RH");
+        Vendedor vendedor = new Vendedor("Maria Oliveira", 3000.00, 10.00);
+
+        System.out.println(gerente);
+        System.out.println(vendedor);
+
+        double salarioComissaoVendedor = vendedor.calcularSalarioComissao();
+        System.out.println("Salário do vendedor com comissão: R$ " + salarioComissaoVendedor);
+    }
+}
+
